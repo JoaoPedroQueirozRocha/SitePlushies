@@ -150,6 +150,7 @@ body{
     background-color: aqua;
     height: 30vh;
     max-width: 100%;
+    flex-wrap: wrap;
 }
 
 #noticias input{
@@ -160,12 +161,12 @@ body{
     width: 100%;
 }
 
-#btnNewsletter{
+/* #btnNewsletter{
     display: flex;
     justify-content: flex-end;
     width: 100%;
     padding: 10%;
-}
+} */
 
 #footer{
     width: 100%;
@@ -186,5 +187,10 @@ body{
     #contentNewsletter{
         width: 60%;
     }
-    
+ 
+    #containerMain{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+
 }
