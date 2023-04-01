@@ -1,196 +1,1100 @@
-
-
-
-/* header{
-    width: 100%;
+*{
+    margin: 0;
+    padding: 0;
 }
 
-#navbar{
-    /* position: absolute; 
-    width: 100%;
-} */
+html{
+  width: 100% ; 
+}
 
 body{
     margin: 0;
-    padding: 0;
-    width: 100%;
-    height: 100vh;
-    /* position: absolute; */
+    background: rgb(171,167,255);
+    background: linear-gradient(90deg, rgba(171,167,255,1) 0%, rgba(168,215,255,1) 45%, rgba(227,252,255,1) 100%);
 }
 
-#sectionContent{
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    /* margin: 5% 5% 5% 5%; */
-    /* gap: 2%; */
-}
-
-#quickFind{
+#conteudo{
     display: flex;
-    flex-direction: column;
-    background-color: gray;
-    width: 80%;
-    height: 70vh;
-    /* justify-content: space-around; */
-    padding: 5%;
-
-}
-
-#quickFind input{
-    margin-bottom: 5%;
-    width: 90%;
-}
-
-#divSelects{
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    height: 50vh;
+    flex-direction: row;
     justify-content: space-between;
-    gap: 7%;
-}
-
-#inputValue{
-    display: flex;
     width: 100%;
-    gap: 2%;
-    margin-top: 10%;
+    height: 100%;
+    padding-top: 0.5%;
+    padding-bottom: 1%;
+    right: 0;
 }
 
-#buttonSearchQuickFind{
-    width: 60%;
-    align-self: center;
-}
-
-#containerMain{
-    display: grid;
-    grid-template-columns: 3fr 1fr;
-    width: 100%;
-    align-self: center;
-    padding: 5%;    
-    /* height: fit-content; */
-}
-
-#containerCards{
-    display: grid;
-    grid-template-rows: 1fr 1fr 1fr;
-    width: 100%;
-    padding: 2%;    
-}
-
-#containerCards .rows/*:not(:last-child)*/{
-    margin-bottom: 5%;
-}
-
-.card{
-    padding: 5%;
-}
-
-/* Formatação do main */
-.rows{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    /* gap: 2%; */
-    width: 100%;
-    justify-items: center;
-    /* justify-content: space-evenly; */
-}
-
-#containerAside{
-    display:flex;
-    flex-direction: column;
-    width: 100%;
-    padding: 5%;
-    height: inherit;
-
-
-
+input:focus, select:focus, button:focus {
+    box-shadow: 0 0 0 0;
+    border: 0 none;
+    outline: 0;
 } 
 
-
-#contentAside{
-    /* display: flex;
-    flex-direction:column ;
-    justify-content: space-between;
-    height: inherit; */
-    display: grid;
-    grid-template-rows: 0fr 5fr 2fr;
+#responsivoSearchNews aside{
+    display: none;
 }
 
-.reviewedItem{
-    /* height: 30vh; */
-    /* justify-content: center; */
-    display: grid;
-    grid-template-columns: 1.3fr 1fr;
-    /* justify-items: space-evenly ; */
-}
-
-#mostReviewed{
-    margin-top: 10%;
-    margin-bottom: 15%;
-    background-color: gray;
+#lateralEsquerda{
     display: flex;
-    flex-direction: column;
-    padding: 5%;
-    justify-content: space-evenly;
+    flex-direction: row;
     align-items: center;
-    height: 120vh;
+    margin-left: 1%;
 }
 
-.imageReviewed{
-    width: 100%;
+#lateralEsquerda p{
+    margin-bottom: 4%;
+    color: white;
+    font-weight: bold;
+    font-size: 22px;
 }
 
-#noticias{
+
+#textoPesquisa{
+    margin-left: 2%;
+}
+
+#pesquisaHeader{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    height: 40px;
+}
+
+#logo{
+    height: 50%;
+    width: 9%;
+    filter: invert(100%)
+}
+
+#pesquisa{
+    width: 300px;
+    padding: 1%;
+    border: 1px solid rgb(0, 65, 93);
+}
+
+.searchIconPesquisa{
+    height: 40%;
+    margin-right: 2%;
+    filter: invert();
+}
+
+#pesquisar{
+    width: 120px;
+    background-color: rgb(0, 93, 133);
+    color: white;
+    border: solid rgb(0, 93, 133);
+}
+
+#pesquisar:hover{
+    background-color: rgb(0, 65, 93);
+    border: solid rgb(0, 65, 93);
+}
+
+#lateral{
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: start;
-    padding: 10%;
-    background-color: aqua;
-    height: 30vh;
-    max-width: 100%;
-    flex-wrap: wrap;
+    margin-top: 0.5%;
 }
 
-#noticias input{
-    width: inherit;
-}
-
-#contentNewsletter{
-    width: 100%;
-}
-
-/* #btnNewsletter{
+#menu{
     display: flex;
-    justify-content: flex-end;
-    width: 100%;
-    padding: 10%;
-} */
-
-#footer{
-    width: 100%;
-    background-color: gray;
-    height: 40vh;
+    justify-content: end;
+    align-items: center;
+    height: fit-content;
+    margin-top: 0.5%;
+    width: 420px;
 }
 
-#footer{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    width: 100%;
-    background-color: gray;
-    justify-items: center;
+a:not([href]):not([tabindex]) {
+    color: white;
+    text-decoration: none;
 }
 
-@media screen and(max-width:940px) {
+a:not([href]):not([tabindex]):hover {
+    color: rgb(177, 196, 214);
+    text-decoration: none;
+}
+
+.menuLinks{
+    color: white;
+    border-right: 2px solid white; 
+    padding-left: 2%;   
+    padding-right: 2%;
+}
+
+.menuLinks:hover{
+    cursor: pointer;
+}
+
+#acompanharP{
+    border: none;
+    padding-right: 0%;
+}
+
+#informativoConteudo{
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    margin-right: 4%;
+    margin-top: 2%;
+}
+
+p{
+    margin: 0;
+}
+
+#navBar{
+    display: none;
+}
+
+#informacoesCliente p{
+    color: white;
+    padding-left: 2%;
+    padding-right: 2%;
+}
+
+#produtoPaga{
+    display: flex;
+    flex-direction: row;
+    width: 350px;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+#pagaBorda{
+    border-right: 2px solid;
+}
+
+#divCarrinho{
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100px;
+}
+
+#notificacao{
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    background: radial-gradient(ellipse at center,rgb(255, 255, 255) 0%,rgb(255, 255, 255) 0%,rgb(255, 255, 255) 67%,rgba(0,0,0,0) 70%);
+    margin-bottom: 55px;
+    margin-left: 63px;
+}
+
+#conteudoDivCarrinho{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(0, 93, 133);
+    padding-top: 7%;
+    padding-bottom: 7%;
+    border-radius: 12px;
+    margin-left: 4%;
+    margin-right: 4%;
+}
+
+#conteudoDivCarrinho:hover{
+    cursor: pointer;
+    background-color: rgb(0, 65, 93);
+}
+
+#carrinhoIcon{
+    height: 30%;
+    width: 30%;
+    filter: invert();
+}
+
+#textoCarrinho{
+    text-align: center;
+    margin-left: 4%;
+    color: white;
+}
+
+section{
+    height: 70hv;
+    width: 100%;
+}
+
+#conteudoSection{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#responsivoSearchNews{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 30%;
+    padding: 2%;
+    margin-left: 0;
+    margin-top: 2%;
+}
+
+#search{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: fit-content;
+    width: 100%;
+    border: 1px solid rgb(0, 65, 93);
+    padding: 4%;
+    color: white;
+}
+
+#search h5{
+    margin-bottom: 3%;
+}
+
+#search > p{
+    margin-bottom: 10%;
+}
+
+.selectF{
+    margin-bottom: 7%;
+    height: 35px;
+    width: 100%;
+}
+
+#divPreco{
+    margin-bottom: 10%;
+    height: fit-content;
+}
+
+#divPreco input{
+    height: 35px;
+    width: 45%;
+    padding: 0.1%;
+    border: 1px solid white;
+}
+
+#divPreco span{
+    color: rgb(0, 17, 24);
+}
+
+#botaoBusca{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 10%;
+    padding: 2%;
+    margin-bottom: 3%;
+    background-color: rgb(0, 93, 133);
+    border-radius: 9px;
+}
+
+#botaoBusca:hover{
+    cursor: pointer;
+    background-color: rgb(0, 65, 93);
+}
+
+#searchIconBusca{
+    height: 90%;
+    width: 4%;
+    margin-right: 2%;
+    filter: invert();
+}
+
+#textoBusca{
+    color: white;
+}
+
+#funkoCarrocel{
+    position: relative !important;
+    height: 80%;
+    width: 60% !important;
+    margin-left: 1% !important;
+    margin-top: 2%;
+    margin-right: 5%;
+}
+
+.carousel-item {
+     object-fit: cover;
+     
+}
+
+.carousel-item img{
+    height: 480px;
+    width: 100%;
+}
+
+#newsLetterSearch .newsLetter{
+    display: none;
+}
+
+main{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;  
+    margin-top: 4%;
+    padding-top: 4%;
+    padding-bottom: 4%;
+}
+
+#footerConteudo{
+    display: flex;
+    flex-direction: row;
+}
+
+#links{
+    display: flex;
+    flex-direction: column;
+}
+
+#conteudoCards{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 70%;
+}
+
+.cards{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: fit-content;
+    width: 22%;
+    padding-bottom: 2%;
+    margin-top: 4%;
+    margin-left: 2%;
+    background-color: white;
+    /* border: rgb(0, 93, 133) solid 3px; */
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.cards:hover{
+    cursor: pointer;
+    background-color: #e5edf0;
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+}
+
+.imagemCard{
+    height: 60%;
+    width: 50%;
+    border-bottom: rgb(0, 93, 133) solid 3px;
+    padding-bottom: 2%;
+}
+
+#banguela{
+    height: 56.90%;
+    width: 46.90%;
+    padding: 6%;
+    border-bottom: rgb(0, 93, 133) solid 3px;
+}
+
+#ellie{
+    height: 47%;
+    width: 37%;
+    padding: 6%;
+    border-bottom: rgb(0, 93, 133) solid 3px;
+}
+
+.precoCard{
+    display: flex;
+    flex-direction: row;
+}
+
+.estrelas{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 3%;
+    padding-top: 3%;
+}
+
+.estrelasImg{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 50%;
+    margin-right: 1%;
+}
+
+.imagemEstrelas{
+    height: 100%;
+    width: 18%;
+    margin-left: 3%;
+}
+
+.precoCard{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin: 1%;
+}
+
+.precoCard p{
+    margin-right: 10px;
+}
+
+aside{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 25%;
+}
+
+aside h2{
+    color: white;
+    -webkit-text-stroke-width: 0.5px;
+    -webkit-text-stroke-color: rgb(0, 93, 133);
+}
+
+#conteudoAside{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-top: 4%;
+    padding-top: 8%;
+    padding-bottom: 8%;
+    border: 1px solid rgb(0, 65, 93);
+}
+
+.cardsAside{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: fit-content;
+    width: 80%;
+    padding-bottom: 4%;
+    margin-top: 4%;
+    margin-left: 2%;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.imagemCardAside{
+    height: 70%;
+    width: 60%;
+    padding: 2%;
+}
+
+.estrelasAside{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 3%;
+    padding-top: 3%;
+}
+
+.precoCardAside{
+    display: flex;
+    flex-direction: column;
+    margin: 1%;
+}
+
+.precoCardAside p{
+    margin-bottom: 7px;
+}
+
+.vejaMais{
+    width: 70%;
+    margin-top: 7%;
+    padding: 2%;
+    border-radius: 6px;
+    background-color: rgb(0, 93, 133);
+    color: white;
+    border: none;
+}
+
+.vejaMais:hover{
+    cursor: pointer;
+    background-color: rgb(0, 65, 93);
+}
+
+.newsLetter{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 5%;
+    margin-top: 6%;
+    border: 1px solid rgb(0, 65, 93);
+    color: white;
+}
+
+.newsLetter p{
+    margin-bottom: 5%;
+}
+
+.newsLetter input{
+    padding: 2%;
+    margin-bottom: 5%;
+    border: 1px solid white;
+}
+
+.newsLetter button{
+    padding: 2%;
+    border-radius: 6px;
+    background-color: rgb(0, 93, 133);
+    color: white;
+    border: none;
+}
+
+.newsLetter button:hover{
+    background-color: rgb(0, 65, 93);
+}
+
+footer{
+    padding-top: 3%;
+    background-color: rgb(177, 177, 177);
+}
+
+#footerConteudo{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding-bottom: 5%;
+}
+
+#footerConteudo h3{
+    color: rgb(206, 247, 252);
+}
+
+.flexFooter{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 40%;
+}
+
+#metodosPagamento{
+    width: 50%;
+    margin-right: 10%;
+}
+
+#metodosPagamento div{
+    margin-top: 7%;
+}
+
+#metodosPagamento img{
+    height: 24%;
+    width: 24%;
+}
+
+#metodosPagamento #mastercard{
+    height: 14%;
+    width: 14%;
+}
+
+#metodosPagamento #pix{
+    height: 14%;
+    width: 14%;
+}
+
+#metodosPagamento #boleto{
+    height: 15%;
+    width: 15%;
+    margin-top: 3%;
+}
+
+#metodosPagamento2{
+    display: flex;
+    flex-direction: row;
+}
+
+#metodosPagamento2 img{
+    margin-right: 5%;
+}
+
+#pagarNaEntrega{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#pagarNaEntrega img{
+    height: 20%;
+    width: 20%;
+    margin-right: 5%;
+    filter: invert();
+}
+
+#pagarNaEntrega p{
+    color: white;
+}
+
+#links{
+    width: 50%;
+}
+
+#links a{
+    margin-top: 7%;
+}
+
+#links a:hover{
+    cursor: pointer;
+}
+
+#divRedeSociais{
+    width: 50%;
+    margin-right: 10%;
+}
+
+#redeSocial{
+    margin-top: 7%;
+}
+
+#redeSocial img{
+    height: 22%;
+    width: 22%;
+    filter: invert();
+}
+
+#redeSocial #twitter{
+    height: 18%;
+    width: 18%;
+}
+
+#contatoFooter{
+    width: 50%;
+}
+
+#contatoFooter{
+    color: white;
+}
+
+#contatoFooter > p{
+    margin-top: 7%;
+}
+
+#email{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 7%;
+}
+
+
+#email img{
+    height: 12%;
+    width: 12%;
+    margin-right: 5%;
+    filter: invert();
+}
+
+#phone{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 7%;
+}
+
+#phone img{
+    height: 14%;
+    width: 14%;
+    margin-right: 5%;
+    filter: invert();
+}
+
+#copyright{
+    padding: 2%;
+    background-color: #79bbcf;
+    text-align: center;
+    font-weight: bold;
+    color: #cef7fc;
+}
+
+@media only screen and (max-width: 1503px) {
+    .precoCard{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .precoCard p{
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width: 1462px) {
+    #divPreco input{
+        height: 35px;
+        width: 44%;
+        padding: 0.1%;
+    }
+}
+
+@media only screen and (max-width: 1221px) {
+    #divPreco input{
+        height: 35px;
+        width: 43.4%;
+        padding: 0.1%;
+    }
+}
+
+@media only screen and (max-width: 1111px) {
+    #divPreco input{
+        height: 35px;
+        width: 42.5%;
+        padding: 0.1%;
+    }
+}
+
+@media only screen and (max-width: 991.5px) {
+    header{
+        position: relative;
+    }
+    #lateralEsquerda{
+        display: none;
+    }
+    #lateralEsquerda2{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin: 0;
+        margin-left: 2%;
+    }
+    #pesquisaHeader{
+        margin-top: 2%;
+        margin-left: 3%;
+    }
+    #pesquisar{
+        width: fit-content;
+        padding-left: 4%;
+        padding-right: 4%;
+    }
+    #menu{
+        display: none;
+    }
+    #informativoConteudo{
+        display: none;
+    }
+    #divCarrinho{
+        display: none;
+    }
+    #conteudoSection{
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+    }
+    #responsivoSearchNews{
+        display: flex;
+        justify-content: space-evenly;
+    }
+    #responsivoSearchNews aside{
+        display: flex;
+    }
+    #navBar{
+        display: block;
+        width: 110%;
+        padding: 0;
+        margin: 0;
+    }
+    #conteudoNav{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    #navBotao{
+        display: flex;
+        align-items: center;
+    }
+    #responsivoSearchNews{
+        display: flex;
+        flex-direction: row;
+    }
+    #funkoCarrocel{
+        width: 100% !important;
+        margin-left: 0;
+        margin-top: 0;
+        margin-right: 0;
+        margin-left: 0% !important;
+    }
+    .nav-link{
+        text-align: center;
+    }
+    .nav-item{
+        border-right: none;
+    }
+    .carousel-item img{
+        width: 1000px;
+    }
+    #pesquisaNav{
+        display: none;
+    }
+    #divPreco input{
+        height: 35px;
+        width: 34%;
+        padding: 0.1%;
+    }
+    section{
+        height: 70hv;
+    }
+    #responsivoSearchNews{
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-evenly;
+        width: 100%;
+    }
+    #newsLetterSearch{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-top: 7.5%;
+    }
+    #newsLetterSearch .newsLetter{
+        display: flex;
+    }
+    #search{
+        width: 80%;
+    }
+
+    .newsLetter{
+        width: 80%;
+    }
     
-    #contentNewsletter{
+    #search h5{
+        margin-bottom: 3%;
+    }
+    
+    #search > p{
+        margin-bottom: 10%;
+    }
+    
+    .selectF{
+        margin-bottom: 7%;
+        height: 35px;
+        width: 100%;
+    }
+    
+    #divPreco{
+        margin-bottom: 10%;
+        height: fit-content;
+    }
+    
+    #divPreco input{
+        height: 35px;
+        width: 43%;
+        padding: 0.1%;
+    }
+    main aside{
+        display: none;
+    }
+    aside{
+        width: 50%;
+        margin-right: 5%;
+    }
+    #conteudoCards{
+        justify-content: start;
+        width: 100%;
+    }
+    .cards{
+        margin-left: 1.5%;
+        margin-right: 1.5%;
+    }
+}
+
+@media only screen and (max-width: 888px) {
+    #divPreco input{
+        height: 35px;
+        width: 41.5%;
+        padding: 0.1%;
+    }
+}
+
+@media only screen and (max-height: 801px) {
+    .carousel-item img{
+        height: 400px;
+    }
+}
+
+@media only screen and (max-width: 801px) {
+    main{
+        margin-bottom: 4%;
+    }
+    #footerConteudo{
+        flex-direction: column;
+    }
+    .flexFooter{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        width: 100%;
+        margin-top: 5%;
+    }
+    #metodosPagamento{
+        width: 40%;
+        margin-right: 0;
+    }
+    #links{
+        width: 40%;
+    }
+    #divRedeSociais{
+        width: 40%;
+        margin-right: 0;
+    }
+    #contatoFooter{
+        width: 40%;
+    }
+}
+@media only screen and (max-width: 656.5px) {
+    #conteudoCards{
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+    .cards{
+        width: 24%;
+        margin-left: 4%;
+    }
+}
+
+@media only screen and (max-width: 575.5px) {
+    #lateralEsquerda2{
+        justify-content: start;
+        margin-left: 0;
+        padding-left: 0;
+    }
+    #logo{
+        height: 50%;
+        width: 40%;
+    }
+    .nav-link{
+        padding-left: 0 !important;
+    }
+    #pesquisaHeader{
+        display: none;
+    }
+    #pesquisaHeader2{
+        position: relative;
+        height: fit-content;
+        padding: 1%;
+        margin-right: 10%;
+    }
+    #pesquisaNav{
+        display: block;
+    }
+    #pesquisar{
+        position: absolute;
+        height: 38.5px;
+        width: 15%;
+        padding-bottom: 1.5%;
+    }
+    #pesquisa{
+        height: 38px;
+        width: 50%;
+        padding: 1.6%;
+    }
+    .searchIconPesquisa{
+        height: 50%;
+        width: 80%;
+    }
+    .carousel-item img{
+        height: 330px;
+    }
+    #responsivoSearchNews aside{
+        display: none;
+    }
+    .newsLetter{
+        display: none;
+    }
+    #conteudoCards{
+        flex-direction: row;
+        justify-content: start;
+        align-items: center;
+        width: 100%;
+        margin-left: 8%;
+    }
+    .cards{
+        width: 40%;
+        margin-left: 4%;
+    }
+}
+
+@media only screen and (max-width: 484px) {
+    .carousel-item img{
+        height: 280px;
+    }
+}
+
+@media only screen and (max-width: 414px) {
+    .flexFooter{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+    #metodosPagamento{
+        align-items: center;
+        width: 80%;
+        margin-top: 4%;
+    }
+    #links{
+        align-items: center;
+        width: 80%;
+        margin-top: 7%;
+    }
+    #divRedeSociais{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 80%;
+        margin-top: 7%;
+    }
+    #redeSocial{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #redeSocial img{
+        height: 20%;
+        width: 20%;
+    }
+
+    #redeSocial #tumbler{
+        height: 16.5%;
+        width: 16.5%;
+    }
+    #contatoFooter{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 80%;
+        margin-top: 7%;
+    }
+    #email{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+    #phone{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+    #phone img {
+        margin-right: 3%;
+    }
+}
+
+@media only screen and (max-width: 393.5px) {
+    #conteudoCards{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        margin-left: 0;
+    }
+    .cards{
+        margin-top: 10%;
         width: 60%;
     }
- 
-    #containerMain{
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr;
-    }
+}
 
+@media only screen and (max-width: 348px) {
+    .carousel-item img{
+        height: 240px;
+    }
 }
