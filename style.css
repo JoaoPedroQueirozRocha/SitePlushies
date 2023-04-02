@@ -1,6 +1,43 @@
 
 
+.carrinho{
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100px;
+    margin-right: 2%;
+    margin-top: 0.5%;
+}
 
+#itens{
+    margin-left: 50%;
+}
+
+.count{
+    position: absolute;
+    /* height: 20px;
+    width: 20px; */
+    background: radial-gradient(ellipse at center,rgb(181, 181, 181) 0%,rgb(181, 181, 181) 0%,rgb(181, 181, 181) 67%,rgba(0,0,0,0) 70%);
+    margin-bottom: 50px;
+    margin-left: 82px;
+}
+
+#cart{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    padding-top: 7%;
+    padding-bottom: 7%;
+    border-radius: 12px;
+    margin-left: 4%;
+    margin-right: 4%;
+}
+
+#cart img{
+    height: 40%;
+    width: 40%;
+}
 
 body{
     margin: 0;
@@ -17,24 +54,46 @@ select{
 }
 
 #sectionContent{
-    display: grid;
-    grid-template-columns: 1fr 2fr;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin: 5%;
+    /* width: 100%; */
     height: 70vh;
-    /* gap: 2%; */
+
+}
+
+#carrosel{
+    position: relative;
+    height: 100%;
+    /* width: 60%; */
 }
 
 #quickFind{
     display: flex;
     flex-direction: column;
+    align-items: center;
     background-color: gray;
-    width: 80%;
-    height: 70vh;
-    /* justify-content: space-around; */
-    padding: 5%;
+    width: 30%;
+    /* height: 70vh; */
+    padding: 2%;
+    margin-right: 2%;
     border-radius: 6px;
 }
 
+#carrosel{
+    position: relative !important;
+    /* height: 80%; */
+    width: 70%;
+    display: flex;
+    align-items: center;
+}
+
+.carousel-inner{
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
 
 #quickFind input{
     margin-bottom: 5%;
@@ -94,7 +153,7 @@ select{
 .MyCard{
     display: flex;
     flex-direction: column;
-    padding-top: 5%;
+    padding-top: 1.3%;
     margin-top: 4%;
     margin-left: 2%;
     /* width: 100%;  */
@@ -116,15 +175,6 @@ select{
     align-items: center;
 }
 
-/* Formatação do main */
-/* .rows{
-    display: flex;
-    flex-direction: row;
-    gap: 2%;
-    width: 100%;
-    justify-items: center;
-    flex-wrap: wrap;
-} */
 
 #containerAside{
     display:flex;
@@ -135,23 +185,16 @@ select{
     /* margin: 10%; */
 } 
 
+/* #carrosel{
+    position: relative;
+} */
 
-#contentAside{
-    /* display: flex;
-    flex-direction:column ;
-    justify-content: space-between;
-    height: inherit; */
-    display: grid;
-    grid-template-rows: 0fr 5fr 2fr;
-}
+
 
 .reviewedItem{
-    /* height: 30vh; */
-    /* justify-content: center; */
     display: grid;
     grid-template-columns: 1.3fr 1fr;
     gap: 2%;
-    /* justify-items: space-evenly ; */
 }
 
 #mostReviewed{
@@ -210,33 +253,41 @@ select{
 
 #footer{
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: row;
+    /* flex-wrap: wrap; */
     width: 100%;
-    height: 40vh;
+    /* height: 40vh; */
     background-color: gray;
     justify-items: center;
     padding: 2%;
-    /* gap: 2%; */
-}
-#quickLinks{
-    width: 25%;
-}
-
-#socialMidia{
-    width: 25%;
 }
 
 a{
     width: fit-content;
 }
 
+
+.divFooter{
+    display: flex;
+    justify-content: space-between;
+}
+/* divs footer */
+#quickLinks{
+    width: 50%;
+}
+
+#socialMidia{
+    width: 50%;
+}
+
 #formasPagamento{
-    width: 25%;
+    width: 50%;
 }
 
 #contactUs{
-    width: 25%;
+    width: 50%;
 }
+/* divs footer */
 
 #formasPagamento img{
     width: 15%;
@@ -261,8 +312,10 @@ a{
 
 @media screen and (max-width: 1300px) {
     
-    #contentNewsletter{
-        width: 60%;
+    #noticias{
+        width: 50%;
+        padding: 2%;
+        align-self: center;
     }
  
     #containerMain{
@@ -277,13 +330,53 @@ a{
 
     }
 
-    #containerAside{
-        flex-direction: row;
+
+}
+
+
+@media screen and (max-width:1320px) {
+    #quickFind{
+        height: 80%;
+    }
+}
+
+@media screen and (max-width: 1220px) {
+    
+}
+
+@media screen and (max-width:1060px) {
+    #quickFind{
+        height: 70%;
+    }
+}
+
+@media screen and (max-width: 905px) {
+    #sectionContent{
+        height: auto;
+        flex-direction: column-reverse;
     }
 
+    #quickFind{
+        margin-top: 5%;
+        width: 70%;
+    }
+
+    #carrosel{
+        width: 100%;
+    }
 }
 
-@media screen and (max-width:910px) {
-
+@media screen and (max-width:500px){
+    #footer{
+        flex-direction: column;
+    }
 }
 
+@media screen and (max-width:282px){
+    .divFooter{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-content: center;
+    }
+}

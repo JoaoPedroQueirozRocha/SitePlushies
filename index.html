@@ -13,10 +13,51 @@
 <body>
 
   <header>
-    <nav class="navbar navbar-dark bg-dark" id="navbar">
-      <a class="navbar-brand" href="#">
-        <img src="/docs/4.1/assets/brand/bootstrap-solid.svg" width="30" height="30" alt="">
-      </a>
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <img src="/docs/5.0/assets/brand/bootstrap-logo.svg" alt="" width="30" height="24">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <form class="d-flex" role="search">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+          </form>
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0" id="itens">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Endereço
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <li><a class="dropdown-item" href="#">Endereço</a></li>
+                <li><a class="dropdown-item" href="#">Rua</a></li>
+                <li><a class="dropdown-item" href="#">Pipi</a></li>
+              </ul>
+            </li>
+          </ul>
+          <div class="carrinho">
+            <span class="count"></span>
+           <div id="cart">
+            <img src="./assets/img/263142.svg" alt="">
+           </div>
+          </div>
+        </div>
+      </div>
     </nav>
   </header>
 
@@ -53,15 +94,11 @@
       </div>
 
       <!-- Start of the image carrousel -->
-      <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-indicators">
-          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
-            aria-current="true" aria-label="Slide 1"></button>
-          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
-            aria-label="Slide 2"></button>
-          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
-            aria-label="Slide 3"></button>
-        </div>
+
+      
+      <div id="carrosel" class="w-70 carousel slide" data-bs-ride="carousel">
+        
+
         <div class="carousel-inner">
           <div class="carousel-item active">
             <img src="https://www.petz.com.br/blog/wp-content/uploads/2020/08/cat-sitter-felino-1280x720.jpg"
@@ -571,71 +608,63 @@
 
   <footer>
     <div id="footer">
-      <div id="formasPagamento"> <!--Formas de pagamento-->
-        <h5>Formas de pagamento</h5>
-        <div>
-          <img src="./assets/img/visa-3-svgrepo-com.svg" alt="">
-          <img src="./assets/img/mastercard-svgrepo-com.svg" alt="">
-          <img src="./assets/img/discover-svgrepo-com.svg" alt="">
+      <div class="divFooter">
+        <div id="formasPagamento"> <!--Formas de pagamento-->
+          <h5>Formas de pagamento</h5>
+          <div>
+            <img src="./assets/img/visa-3-svgrepo-com.svg" alt="">
+            <img src="./assets/img/mastercard-svgrepo-com.svg" alt="">
+            <img src="./assets/img/discover-svgrepo-com.svg" alt="">
+          </div>
+          <div>
+            <img src="./assets/img/pix-svgrepo-com.svg" alt="">
+            <img src="./assets/img/paypal-svgrepo-com.svg" alt="">
+          </div>
+          <div>
+            <img src="./assets/img/cash-dollar-finance-svgrepo-com.svg" alt="">
+            <img src="./assets/img/amex-svgrepo-com.svg" alt="">
+          </div>
         </div>
-        <div>
-          <img src="./assets/img/pix-svgrepo-com.svg" alt="">
-          <img src="./assets/img/paypal-svgrepo-com.svg" alt="">
-        </div>
-        <div>
-          <img src="./assets/img/cash-dollar-finance-svgrepo-com.svg" alt="">
-          <img src="./assets/img/amex-svgrepo-com.svg" alt="">
-        </div>
-      </div>
-
-      <div id="quickLinks"><!--Links rápidos-->
-        <h5>Quick Links</h5>
-        <div>
-          <a href="#">Help</a>
-        </div>
-        <div>
-          <a href="#">Shipping Policy</a>
-        </div>
-        <div>
-          <a href="#">Cancelation & Returns</a>
-        </div>
-        <div>
-          <a href="#">Faq</a>
-        </div>
-        <div>
-          <a href="#">Privacy Policy</a>
-        </div>
-        <div>
-          <a href="#">Disclamer</a>
+  
+        <div id="quickLinks"><!--Links rápidos-->
+          <h5>Quick Links</h5>
+            <a href="#">Help</a>
+            <a href="#">Shipping Policy</a>
+            <a href="#">Cancelation & Returns</a>
+            <a href="#">Faq</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Disclamer</a>
         </div>
       </div>
 
-      <div id="socialMidia"><!--Redes sociais-->
-        <h5>Let's be social</h5>
-        <div>
-          <img src="./assets/img/facebook-svgrepo-com.svg" alt="" id="first">
-          <img src="./assets/img/twitter-logo-svgrepo-com.svg" alt="" class="second">
-          <img src="./assets/img/gplus-rounded-svgrepo-com.svg" alt="" class="second">
+      <div class="divFooter">
+        <div id="socialMidia"><!--Redes sociais-->
+          <h5>Let's be social</h5>
+          <div>
+            <img src="./assets/img/facebook-svgrepo-com.svg" alt="" id="first">
+            <img src="./assets/img/twitter-logo-svgrepo-com.svg" alt="" class="second">
+            <img src="./assets/img/gplus-rounded-svgrepo-com.svg" alt="" class="second">
+          </div>
         </div>
-      </div>
-
-      <div id="contactUs"><!--Contact us-->
-        <h5>Contact us</h5>
-        
-        <div>
-          <p>Address line one</p>
-          <p>Street No</p>
-          <p>Place</p>
+  
+        <div id="contactUs"><!--Contact us-->
+          <h5>Contact us</h5>
+          
+          <div>
+            <p>Address line one</p>
+            <p>Street No</p>
+            <p>Place</p>
+          </div>
+          <div>
+            <img src="./assets/img/email-14-svgrepo-com.svg" alt="" id="emailIcon">
+            <a href="#">info@company.com</a>
+          </div>
+          <div>
+            <img src="./assets/img/phone-svgrepo-com.svg" alt="" id="telIcon">
+            1800 4400 22
+          </div>
+  
         </div>
-        <div>
-          <img src="./assets/img/email-14-svgrepo-com.svg" alt="" id="emailIcon">
-          <a href="#">info@company.com</a>
-        </div>
-        <div>
-          <img src="./assets/img/phone-svgrepo-com.svg" alt="" id="telIcon">
-          1800 4400 22
-        </div>
-
       </div>
     </div>
   </footer>
